@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Grid, Row} from 'react-bootstrap';
+import Character from './Character';
 import {createHash} from 'crypto';
 import axios from 'axios';
 
@@ -44,7 +45,7 @@ export default class CharactersContainer extends Component {
 		return (
 			<Grid>
 				<Row>
-					<p>Hello, world!</p>
+					{this.state.characters.map(character => <Character character={character} key={character.id}/>)}
 				</Row>
 			</Grid>
 		);

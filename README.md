@@ -1,6 +1,6 @@
 # Liste Marvel
 
-**Objectif: Utiliser une API Marvel pour afficher une liste de superhéro avec React.**
+**Objectif: Utiliser une API Marvel pour afficher une liste de superhéros avec React.**
 
 ## Techo utilisées
 * [create-react-app](https://github.com/facebookincubator/create-react-app)
