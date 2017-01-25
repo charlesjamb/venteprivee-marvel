@@ -20,17 +20,18 @@ export default class CharactersContainer extends Component {
 		let privateKey = 'b0223681fced28de0fe97e6b9cd091dd36a5b71d';
 		let currentTime = + new Date();
 		let concatenatedString = currentTime + privateKey + publicKey;
+
 		axios.get(`http://gateway.marvel.com/v1/public/characters`, {
 			params: {
 				"ts": + currentTime,
-				"apiKey": publicKey,
+				"apikey": publicKey,
 				"hash": createHash('md5').update(concatenatedString).digest('hex') 
 			}
 		})
 		.then(result => {
 			console.log('request sent');
 			this.setState({
-				characters: result
+				characters: result.data.data.results
 			});
 		})
 		.catch(err => {
