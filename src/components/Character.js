@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Col, Thumbnail, Button, Modal} from 'react-bootstrap';
 import ModalBody from './ModalBody';
 
@@ -50,3 +50,7 @@ export default class Character extends Component {
 		);
 	}
 };
+
+Character.propTypes = {
+	character: PropTypes.object
+}

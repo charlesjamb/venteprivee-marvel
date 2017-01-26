@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Marvel', sans-serif;
 }
 
 .App-header {
@@ -20,9 +21,14 @@
 }
 
 .thumbnail img {
-    width: 100%;
+    width: 90%;
     height: 300px;
     display: block;
+}
+
+.modal {
+  font-family: 'Marvel', sans-serif;
+  font-size: 1.5em;
 }
 
 .modal-body {

@@ -40,7 +40,6 @@ export default class CharactersContainer extends Component {
 	}
 
 	render() {
-		console.log('Characters list ', this.state.characters)
 		return (
 			<Grid>
 				<Row>
