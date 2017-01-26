@@ -3,9 +3,9 @@
 **Objectif: Utiliser une API Marvel pour afficher une liste de superhéros avec React.**
 
 Pour lancer l'app:  
-1. cloner le repo
-2. *npm i*
-3. *npm start*
+1. cloner le repo  
+2. *npm i*  
+3. *npm start*  
 
 ## Techo utilisées
 * [create-react-app](https://github.com/facebookincubator/create-react-app)
