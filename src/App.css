@@ -39,3 +39,11 @@
   max-width: 350px;
   height: 300px;
 }
+
+.margin-modal {
+  margin-top: 1em;
+}
+
+li {
+  list-style: none;
+}

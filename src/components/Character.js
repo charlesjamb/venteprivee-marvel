@@ -32,12 +32,15 @@ export default class Character extends Component {
 					<h2>{character.name}</h2>
 					<Button bsStyle="default" bsSize="large" onClick={this._open}>MORE INFO</Button>
           <Modal show={this.state.showModal} onHide={this._close}>
+          	<Modal.Header closeButton>
+							<Modal.Title>{character.name}</Modal.Title>
+						</Modal.Header>
             <ModalBody name={character.name} 
             					 image={img} 
             					 description={character.description}
             					 marvel={character.urls[0].url}
-            					 comics={character.comics.items}
-            					 series={character.series.items}/>
+            					 comics={character.comics}
+            					 series={character.series}/>
             <Modal.Footer>
               <Button bsStyle="default" bsSize="large" onClick={this._close}>CLOSE</Button>
             </Modal.Footer>
