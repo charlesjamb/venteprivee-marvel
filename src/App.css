@@ -35,6 +35,7 @@
 }
 
 .modal-body img {
+  border-radius: 10%;
   max-width: 350px;
   height: 300px;
 }

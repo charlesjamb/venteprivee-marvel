@@ -1,9 +1,13 @@
 import React, {Component, PropTypes} from 'react';
-import {Button, Modal} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 
 export default class ModalBody extends Component {
-	constructor(props) {
-		super(props);
+	// constructor(props) {
+	// 	super(props);
+	// }
+
+	componentDidMount() {
+		console.log(this.props.comics);
 	}
 
 	render() {
@@ -15,10 +19,28 @@ export default class ModalBody extends Component {
 				<Modal.Body>
 					<img src={this.props.image} alt="242x200"/>
 					<p>
-						Lorem ipsum
+						{this.props.description}
 					</p>
+					<h3>Comics</h3>
+					<li className='list-item'>
+						{this.props.comics.map(comic => <ul className='list-group-item'>{comic.name}</ul>)}
+					</li>
+					<h3>Series</h3>
+					<li className='list-item'>
+						{this.props.series.map(serie => <ul className='list-group-item'>{serie.name}</ul>)}
+					</li>
+					<a className="btn btn-default" href={this.props.marvel}>TO MARVEL</a>
 				</Modal.Body>
 			</div>
 		);
 	}
+};
+
+ModalBody.propTypes = {
+	name: PropTypes.string,
+	image: PropTypes.string,
+	description: PropTypes.string,
+	marvel: PropTypes.string,
+	comics: PropTypes.array,
+	series: PropTypes.array
 }
